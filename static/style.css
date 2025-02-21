@@ -1,0 +1,149 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+#pixel {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.head {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #ffcc80; 
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.eyes {
+    position: absolute;
+    top: 40px;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.eyes:nth-child(1) {
+    left: 35px;
+}
+
+.eyes:nth-child(2) {
+    right: 35px;
+}
+
+.mouth {
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    width:  0px;
+    height: 15px;
+    background-color: #270505;
+    border-radius: 0 0 30px 30px;
+}
+
+.tears {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    width: 10px;
+    height: 50px;
+    background-color: #3399ff;
+    border-radius: 50%;
+    animation: fall 1s infinite ease-in-out;
+}
+
+.hidden { 
+    display: none; 
+}
+
+.captcha-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.captcha-input {
+    width: 300px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.captcha-input:focus {
+    outline: none;
+    border-color: #bc2222;
+}
+
+.captcha-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.captcha-button:hover {
+    background-color: #45a049;
+}
+
+.message-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message {
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(26, 2, 251, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
