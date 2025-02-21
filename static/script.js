@@ -9,7 +9,7 @@ function submitCaptcha() {
         .then(data => {
             if (data.sad) {
                 document.querySelector('.tears').classList.remove('hidden');
-                document.querySelector('.mouth').computedStyleMap.transform = "rotate(180deg)";
+                document.querySelector('.mouth').style.transform = "rotate(180deg)";
                 const message = document.getElementById("captchaMessage");
                 message.innerText = "CAPTCHA successful!";
                 message.classList.add("showMessage");
