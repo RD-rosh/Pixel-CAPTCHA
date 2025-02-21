@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel CAPTCHA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div class = "container">
+            <div id="pixel">
+                <div class = "head">
+                    <div class = "eyes"></div>
+                    <div class = "eyes"></div>
+                    <div class = "mouth"></div>
+                    <div class = "tears hidden"></div>
+                </div>
+            </div>
+            <p class = "message"> Prove you are a human. Make Pixel sad. </p>
+            <div class = "captcha-container">
+                <input type = "text" id = "captchaInput" placeholder="Type something..." class="captcha-input">
+                <button onclick="submitCaptcha()" class="captcha-button">Tell Pixel</button>
+            <p class="message" id="captchaMessage"></p>
+            </div>
+        </div>
+        <link rel="stylesheet" href="{{ url_for('static', filename='script.js') }}">
+    </body>
+</html>
