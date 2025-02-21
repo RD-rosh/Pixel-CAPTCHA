@@ -11,12 +11,12 @@ function submitCaptcha() {
                 document.querySelector('.tears').classList.remove('hidden');
                 document.querySelector('.mouth').computedStyleMap.transform = "rotate(180deg)";
                 const message = document.getElementById("captchaMessage");
-                message.innerText = "CAPTCHA SUCCESSFUL!";
+                message.innerText = "CAPTCHA successful!";
                 message.classList.add("showMessage");
             }
             else {
-                document.querySelector('tears').classList.add('hidden');
-                document.querySelector('.mouth').computedStyleMap.transform = "rotate(0deg)";
+                document.querySelector('.tears').classList.add('hidden');
+                document.querySelector('.mouth').style.transform = "rotate(0deg)";
                 const message = document.getElementById("captchaMessage");
                 message.innerText = "Try again!";
                 message.classList.add("showMessage");
