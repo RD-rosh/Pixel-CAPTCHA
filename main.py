@@ -13,7 +13,7 @@ def validate():
     data = request.json
     text = data.get('text','')
     sentiment_scores = analyzer.polarity_scores(text)
-    is_sad = sentiment_scores['compound'] < -0.05
+    is_sad = sentiment_scores['compound'] <= -0.05
     return jsonify({"sad":is_sad})
 
 if __name__ == '__main__':
